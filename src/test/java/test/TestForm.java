@@ -21,6 +21,16 @@ public class TestForm {
         $("[for='gender-radio-2']").click();
         //заполняем текстовое поле телефон
         $("[id=userNumber]").setValue("1234567");
+        //кликаем на поле дата чтобы всплыл календарь
+        $("[id='dateOfBirthInput']").click();
+        //выбор даты из календаря
+        $("[class*='datepicker__day--006']").click();
+        //выбор месяца из календаря
+        $("[class* = 'month-select']").selectOptionByValue("5");
+        //выбор года из календаря
+        $("[class* = 'datepicker__year-select']").selectOptionByValue("1986");
+
+
 
 
 
