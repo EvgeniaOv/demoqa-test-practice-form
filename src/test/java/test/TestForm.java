@@ -13,6 +13,8 @@ public class TestForm {
         $("[id=firstName]").setValue("Евгения");
         $("[id=lastName]").setValue("Овечкина");
         $("[id=userEmail]").setValue("gralph@rambler.ru");
+        $("[for='gender-radio-2']").click();
+        $("[id=userNumber]").setValue("1234567");
 
 
 
