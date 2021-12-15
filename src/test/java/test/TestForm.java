@@ -23,18 +23,11 @@ public class TestForm {
         $("[id=userNumber]").setValue("1234567");
         //кликаем на поле дата чтобы всплыл календарь
         $("[id='dateOfBirthInput']").click();
+        //выбор года из календаря
+        $(".react-datepicker__year-select").selectOptionByValue("1986");
+        //выбор месяца из календаря
+        $(".react-datepicker__month-select").selectOptionByValue("5");
         //выбор даты из календаря
         $("[class*='datepicker__day--006']").click();
-        //выбор месяца из календаря
-        $("[class* = 'month-select']").selectOptionByValue("5");
-        //выбор года из календаря
-        $("[class* = 'datepicker__year-select']").selectOptionByValue("1986");
-
-
-
-
-
-
-
     }
 }
