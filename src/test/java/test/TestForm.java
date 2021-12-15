@@ -11,10 +11,10 @@ public class TestForm {
     void fillFromTest() {
        //открываем страницу с формой в браузере
         open("https://demoqa.com/automation-practice-form");
-        //заполняем текстовое поле Имя
-        $("[id=firstName]").setValue("Евгения");
+        //заполняем текстовое поле имя
+        $("[id=firstName]").setValue("Evgenia");
         //заполняем текстовое поле фамилия
-        $("[id=lastName]").setValue("Овечкина");
+        $("[id=lastName]").setValue("Ovechkina");
         //заполняем текстовое поле эл.адреса
         $("[id=userEmail]").setValue("gralph@rambler.ru");
         //кликаем на радоио-батн
