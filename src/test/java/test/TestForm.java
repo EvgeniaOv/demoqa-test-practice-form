@@ -39,11 +39,8 @@ public class TestForm {
         $("#subjectsInput").setValue("Economics").pressEnter();
         //выбор чек-бокса
         $("[for='hobbies-checkbox-1']").click();
-        //$("[for='hobbies-checkbox-2']").click();
         //загрузка файла текстовый файл в идеа
-        ///прописываем путь к файлу
-        //File file = new File("src/test/down.load");
-        ///селектор на загрузку файла по указанному ранее пути
+        ///селектор на загрузку файла по указанному  пути
         $("#uploadPicture").uploadFile(new File("src/test/down.load"));
         //заполняем текстовое поле адрес
         $("#currentAddress").setValue("Moscow");
@@ -67,44 +64,7 @@ public class TestForm {
                 text("Address"), text("Moscow"),
                 text("State and City"), text("Haryana Karnal")
         );
-        sleep(5000);
-
     }
 }
-
-
-    /*void checkResult() {
-       $(byText("Thanks for submitting the form")).should(appear);
-       $(byText("Evgenia Ovechkina")).should(appear);
-       $(byText("gralph@rambler.ru")).should(appear);
-       $(byText("Female")).should(appear);
-       $(byText("9296556480")).should(appear);
-       $(byText("")).should(appear);
-       $(byText("Economics")).should(appear);
-       $(byText("Reading, Sports")).should(appear);
-       $(byText("down.load")).should(appear);
-       $(byText("Moscow")).should(appear);
-       $(byText("Haryana")).should(appear);
-       $(byText("Karnal")).should(appear);
-    }
-
-
-     */
-
-    /*$(".modal-content").shouldHave(
-            text("Student Name"), text("Evgenia Ovechkina"),
-    text("Student Email"), text("gralph@rambler.ru"),
-    text("Gender"), text("Female"),
-    text("Student Name"), text("9296556480"),
-    text("Student Name"), text("06 June,1986"),
-    text("Student Name"), text("Evgenia Ovechkina"),
-    text("Student Name"), text("Evgenia Ovechkina"),
-    text("Student Name"), text("Evgenia Ovechkina"),
-    text("Student Name"), text("Evgenia Ovechkina"),
-    text("Student Name"), text("Evgenia Ovechkina"),
-    );
-        }
-
-     */
 
 
