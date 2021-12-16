@@ -2,6 +2,8 @@ package test;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -34,6 +36,21 @@ public class TestForm {
         //выбор чек-бокса
         $("[for='hobbies-checkbox-1']").click();
         $("[for='hobbies-checkbox-2']").click();
+        //загрузка файла текстовый файл в идеа
+        ///прописываем путь к файлу
+        File file = new File("src/test/down.load");
+        ///селектор на загрузку файла по указанному ранее пути
+        $("#uploadPicture").uploadFile(file);
+        //заполняем текстовое поле адрес
+        $("#currentAddress").setValue("Moscow");
+        //выбор из выпадающего списка с указанием значения клик на выбранное значение
+        $("#react-select-3-input").setValue("Haryana").pressEnter();
+        $("#react-select-4-input").setValue("Karnal").pressEnter();
+        //клик по итоговой кнопке
+        $("#submit").click();
+
+
+
 
 
 
