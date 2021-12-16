@@ -1,9 +1,11 @@
 package test;
 
+import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -22,7 +24,7 @@ public class TestForm {
         //кликаем на радоио-батн
         $("[for='gender-radio-2']").click();
         //заполняем текстовое поле телефон
-        $("#userNumber").setValue("1234567");
+        $("#userNumber").setValue("9296556480");
         //кликаем на поле дата чтобы всплыл календарь
         $("#dateOfBirthInput").click();
         //выбор года из календаря
@@ -49,10 +51,29 @@ public class TestForm {
         //клик по итоговой кнопке
         $("#submit").click();
 
+        //проверка формы
+        checkResult();
+    }
 
+    void checkResult() {
+       $(byText("Thanks for submitting the form")).should(Condition.appear);
+       $(byText("Evgenia Ovechkina")).should(Condition.appear);
+       $(byText("gralph@rambler.ru")).should(Condition.appear);
+       $(byText("Female")).should(Condition.appear);
+       $(byText("9296556480")).should(Condition.appear);
+       $(byText("06 June,1986")).should(Condition.appear);
+       $(byText("Economics")).should(Condition.appear);
+       $(byText("Reading, Sports")).should(Condition.appear);
+       $(byText("down.load")).should(Condition.appear);
+       $(byText("Moscow")).should(Condition.appear);
+       $(byText("Haryana")).should(Condition.appear);
+       $(byText("Karnal")).should(Condition.appear);
 
 
 
 
     }
-}
+
+        }
+
+
