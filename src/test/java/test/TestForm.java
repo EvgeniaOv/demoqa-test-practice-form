@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
+import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -56,22 +57,18 @@ public class TestForm {
     }
 
     void checkResult() {
-       $(byText("Thanks for submitting the form")).should(Condition.appear);
-       $(byText("Evgenia Ovechkina")).should(Condition.appear);
-       $(byText("gralph@rambler.ru")).should(Condition.appear);
-       $(byText("Female")).should(Condition.appear);
-       $(byText("9296556480")).should(Condition.appear);
-       $(byText("06 June,1986")).should(Condition.appear);
-       $(byText("Economics")).should(Condition.appear);
-       $(byText("Reading, Sports")).should(Condition.appear);
-       $(byText("down.load")).should(Condition.appear);
-       $(byText("Moscow")).should(Condition.appear);
-       $(byText("Haryana")).should(Condition.appear);
-       $(byText("Karnal")).should(Condition.appear);
-
-
-
-
+       $(byText("Thanks for submitting the form")).should(appear);
+       $(byText("Evgenia Ovechkina")).should(appear);
+       $(byText("gralph@rambler.ru")).should(appear);
+       $(byText("Female")).should(appear);
+       $(byText("9296556480")).should(appear);
+       $(byText("06 June,1986")).should(appear);
+       $(byText("Economics")).should(appear);
+       $(byText("Reading, Sports")).should(appear);
+       $(byText("down.load")).should(appear);
+       $(byText("Moscow")).should(appear);
+       $(byText("Haryana")).should(appear);
+       $(byText("Karnal")).should(appear);
     }
 
         }
