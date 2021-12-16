@@ -50,7 +50,6 @@ public class TestForm {
         $("#submit").click();
 
         //проверка формы
-        // checkResult();
         $(".modal-content").shouldHave(
                 text("Student Name"), text("Evgenia Ovechkina"),
                 text("Student Email"), text("gralph@rambler.ru"),
